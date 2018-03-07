@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class CreatePQ {
     ArrayList arrayOfString;
     CreatePQ(){
+        this.arrayOfString = new ArrayList<String>();
         ReadInput myreadInput = new ReadInput();
         myreadInput.Start(this.arrayOfString);
     }
