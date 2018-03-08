@@ -10,9 +10,8 @@ class ReadInput {
     public void Start(ArrayList arrayOfString){
         Scanner sc = new Scanner(System.in);
         Integer numberOfString = sc.nextInt();
-        sc.nextLine();
         for (int i = 0; i < numberOfString; i++) {
-            arrayOfString.add(sc.nextLine());
+            arrayOfString.add(sc.next());
         }
     }
 }

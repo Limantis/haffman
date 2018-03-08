@@ -1,8 +1,6 @@
 package com.limantis;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
+import java.util.*;
 
 
 public class CreatePQ {
@@ -12,7 +10,21 @@ public class CreatePQ {
         ReadInput myreadInput = new ReadInput();
         myreadInput.Start(this.arrayOfString);
     }
+
+    private static Comparator<Integer> idComparator = new Comparator<Integer>() {
+        @Override
+        public int compare(Integer i1, Integer i2) {
+            return (Integer) (i2 - i1);
+        }
+    };
+
     public void Start(){
-        System.out.println(this.arrayOfString);
+        Queue<Integer> userPriorityQueeue = new PriorityQueue<Integer>(7, idComparator);
+
+        for (int i = 0; i < this.arrayOfString.size(); i++) {
+            userPriorityQueeue.add(i);
+        }
+
+        System.out.println(userPriorityQueeue.peek());
     }
 }
